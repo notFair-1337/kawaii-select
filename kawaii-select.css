@@ -1,0 +1,83 @@
+.js-kawaii-select{
+    display: none;
+}
+
+.kawaii-select{
+    position: relative;
+    margin-bottom: 10px ;
+}
+.kawaii-select__drop{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    width: 100%;
+    background-color: #1E5799;
+    border-radius: 5px;
+    color: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    z-index: 9999;
+}
+.kawaii-select__list-item:first-child .kawaii-select__button{
+    border-radius: 5px 5px 0 0;
+}
+.kawaii-select__list-item:last-child .kawaii-select__button{
+    border-radius: 0 0 5px 5px;
+}
+.kawaii-select--active .kawaii-select__drop{
+    display: block;
+}
+.kawaii-select__button{
+    padding: 10px;
+    display: block;
+    width: 100%;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    transition: all .2s linear;
+    text-align: left;
+    position: relative;
+}
+.kawaii-select__current-text:before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: url("arrow-down.svg") no-repeat center/contain;
+    transition: all .2s linear;
+}
+.kawaii-select--active .kawaii-select__current-text:before{
+    transform: translateY(-50%) rotate(180deg);
+}
+.kawaii-select__button:hover{
+    color: coral;
+    background-color: #126bcd;
+}
+
+.kawaii-select__current{
+    width: 200px;
+    background-color: #1E5799;
+    border-radius: 5px;
+}
+.kawaii-select__current-text{
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #1E5799;
+    border-radius: 5px;
+    padding-right: 30px;
+}
